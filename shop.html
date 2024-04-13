@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            font-family:'Times New Roman', Times, serif;
+        }
+        .con{
+            width:100%;
+            height:70px;
+            background-color:brown;
+            box-shadow:  0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 0px;
+        }
+        .con h2{
+            position: absolute;
+            left: 25px;
+            padding: 1px;
+            top: 0px;
+        }
+        .con h2 i{
+            font-size: 55px;
+            color: white;
+        }
+        h1{
+            color: white;
+            font-size: 30px;
+        }
+        .side{
+            position: absolute;
+            right:25px;
+            top:35px;
+            display: block;
+        }
+        .icon{
+            padding: 11px;
+            color: white;
+            text-decoration: none;
+        }
+        .icon:hover{
+            color:black;
+        }
+        #icon3{
+            display: none;
+        }
+        .top{
+            position: absolute;
+            top:-340px;
+            width: 60%;
+            display: block;
+            left: 320px;
+            background-color:brown;
+            border-radius: 8px;
+            transition: 1s;
+        }
+        .top h1{
+            color: white;
+            margin-left: 380px;
+        }
+        .top p{
+            padding-left: 14px;
+            padding-right: 14px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            color: white;
+        }
+        .side1{
+            width: 20%;
+            background-color: brown;
+            height: 100%;
+            position: fixed;
+            left: -320px;
+            top: 7px;
+            transition: 1s;
+        }
+        .side2{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        .side2 i{
+            padding: 20px;
+            color: black;
+        }
+        .icon1{
+            display: flex;
+            padding: 15px;
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+        }
+        .content{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 30px;
+            box-shadow:  0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+        }
+        .content img{
+            margin-left: 25px;
+        }
+        .head{
+            padding: 0px;
+            font-size: 25px;
+        }
+        marquee{
+            font-size: 19px;
+            direction: scroll;
+            letter-spacing: 1px;
+        }
+       .float{
+            margin-top: 20px;
+       }
+       .entire{
+        display: block;
+       }
+       .entire1{
+        display: block;
+       }
+       .middle{
+        display: flex;
+       }
+       .m_content{
+        background-color: antiquewhite;
+        width:10%;
+        padding: 2px;
+        border-radius:30px;
+        margin-left: 40px;
+        display: flex;
+        justify-content: center;
+        border: none;
+       }
+       .m_content:hover{
+        background-color: brown;
+        color: white;
+        text-decoration: underline;
+       }
+       .focus{
+        width: 50%;
+        padding: 50px;
+       }
+       .focus h4{
+        font-size: 50px;
+       }
+       .focus p{
+        font-size: 30px;
+       }
+       .delete{
+        padding: 6px;
+        margin-left: 50px;
+        margin-bottom: 8px;
+        width: 10%;
+        font-size: 20px;
+        color: brown;
+        border-radius: 5px;
+        border: none;
+       }
+       .delete:hover{
+        background-color: black;
+        color: white;
+       }
+       .men{
+        background-color:aliceblue;
+        width: 22%;
+        height: 450px;
+        display: flex;
+        flex-direction:column ;
+        align-items: center;
+        margin-top: 30px;
+       }
+       .men img{
+        size: 80px;
+        border-radius: 5px;
+        margin-top: 10px;
+       }
+       .men p{
+        font-size: 20px;
+        
+       }
+       .pa{
+        background-color: black;
+        color: white;
+        width: 30%;
+        height: fit-content;
+        display: flex;
+       justify-content: center;
+       border-radius: 10px;
+       }
+       .image{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 40px;
+       }
+       .image1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 40px;
+       }
+       .display1{
+        display: none;
+       }
+       .display0{
+        display: block;
+       }
+       .display2{
+        display: none;
+       }
+       .footer{
+        background-color: brown;
+        width: 100%;
+        height: 270px;
+        margin-top: 10px;
+       }
+       .foocontent{
+        color: white;
+        padding: 25px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 2px;
+       }
+       .foocontent p{
+        margin-top: 4px;
+       }
+       .user{
+        background-color: white;
+        border-radius: 100%;
+        width: 20%;
+        height: 40px;
+        display: flex;
+        padding: 3px;
+        position: relative;
+        right: 0px;
+        bottom: 25px;
+        align-items: center;
+       }
+       .user i{
+        font-size: 20px;
+        position: relative;
+        bottom: 0px;
+        left: -4px;
+        right:25
+       }
+       .user p{
+        margin-left: 10px;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 17px;
+       }
+       @media screen and (max-width:900px){
+        .top{
+            top: -1500px;
+        }
+        .side{
+            display: none;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Best Shop<i class="fa-solid fa-cart-shopping"></i></h1>
+        <div class="side">
+            <a href="Shop.html" target="_self" class="icon">Home</a>
+            <a href="shop collection.html" class="icon">Collection</a>
+            <a href="#" class="icon" onclick="call()" >About</a>
+            <a href="#" class="icon" onclick="side()" ><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <h2><i class="fa-brands fa-microblog"></i></h2>
+    </div>
+    <div class="entire">
+    <div class="float">
+    <marquee> Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp
+        &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp
+        &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp
+    </marquee>
+    </div></div>
+    <div class="top">
+        <h1>ABOUT</h1>
+        <div class="top_content">
+            <p>Creating a shopping website involves a series of strategic steps. Begin by clearly defining the purpose and scope 
+                of your site, specifying the products or services and identifying your target audience. Choose a suitable platform, 
+                like WordPress with WooCommerce or Shopify, and secure a domain name and hosting. Design an appealing and user-friendly 
+                interface, ensuring responsiveness across devices. Organize your product catalog logically, and implement a secure shopping 
+                cart and checkout system. Prioritize security measures, such as SSL encryption, and adhere to data protection regulations. 
+                Stay abreast of e-commerce trends to ensure your website remains competitive and meets customer expectations.</p>
+        </div>
+        <button onclick="del()" class="delete">
+            Cancel
+        </button>
+    </div>
+    <div class="side1">
+        <div class="side2">
+            <div class="user">
+                <i class="fa-solid fa-user"></i>
+                <p>CHANDRU</p>
+                <hr style="color: white;">
+            </div>
+            <a href="about" class="icon1">&#x2022; Home</a>
+            <a href="about" class="icon1">&#x2022; Kids Shoe</a>
+            <a href="#" class="icon1" >&#x2022; Men shoe</a>
+            <a href="about" class="icon1">&#x2022; Women Shoe</a>
+            <a href="#" class="icon1" onclick="sidedel()">&#x2022; Cancel</a>
+        </div>
+    </div>
+    <div class="entire1">
+    <div class="content">
+        <div class="head">
+        <h2>If the Shoe Fits</h2>
+        <h2>Buy It...</h2>
+    </div>
+        <img src="https://source.unsplash.com/random/300x300/?shoe?1">
+    </div>
+   </div>
+   <div class="focus">
+    <h4>Shop Here! <i class="fa-brands fa-microblog"></i></h4>
+    <p>Run on Clouds with our Swiss-engineered performance running shoes and apparel. These designs feature 
+        patented technology developed in the On Lab. The ultimate in comfort and performance – 
+        wherever your workout takes you.
+    </p>
+   </div>
+   <div class="middle">
+    <button class="m_content" onclick="show1()">
+        <p>MENS <i class="fa-solid fa-person"></i></p>
+    </button>
+    <button class="m_content" onclick="show()">
+        <p>WOMENS <i class="fa-solid fa-person-dress"></i></p>
+    </button>
+    <button class="m_content" onclick="show2()">
+        <p>KIDS <i class="fa-solid fa-child"></i></p>
+    </button>
+   </div>
+   <div class="display0">
+   <div class="image">
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?2">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 1050</p>
+        </div>
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?3">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 799</p>
+        </div>
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?4">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 250</p>
+        </div> 
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?5">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 599</p>
+        </div> 
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?6">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 5000</p>
+        </div> 
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?7">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 450</p>
+        </div> 
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?8">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 2500</p>
+        </div> 
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?9">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 1050</p>
+        </div> 
+    </div>
+   </div>
+   </div>
+    <div class="display1">
+    <div class="image1">
+        <div class="men">
+            <img src="https://source.unsplash.com/random/300x300/?shoe?23">
+            <p><b>Women Shoe</b></p>
+            <div class="pa"> 
+                <p>Price - 1050</p>
+            </div>
+        </div>
+        <div class="men">
+            <img src="https://source.unsplash.com/random/300x300/?shoe?333">
+            <p><b>Women Shoe</b></p>
+            <div class="pa"> 
+                <p>Price - 799</p>
+            </div>
+        </div>
+        <div class="men">
+            <img src="https://source.unsplash.com/random/300x300/?shoe?43">
+            <p><b>Women Shoe</b></p>
+            <div class="pa"> 
+                <p>Price - 250</p>
+            </div> 
+        </div>
+        <div class="men">
+            <img src="https://source.unsplash.com/random/300x300/?shoe?53">
+            <p><b>Women Shoe</b></p>
+            <div class="pa"> 
+                <p>Price - 599</p>
+            </div> 
+        </div>
+        <div class="men">
+            <img src="https://source.unsplash.com/random/300x300/?shoe?63">
+            <p><b>Women Shoe</b></p>
+            <div class="pa"> 
+                <p>Price - 5000</p>
+            </div> 
+        </div>
+        <div class="men">
+            <img src="https://source.unsplash.com/random/300x300/?shoe?73">
+            <p><b>Women Shoe</b></p>
+            <div class="pa"> 
+                <p>Price - 450</p>
+            </div> 
+        </div>
+        <div class="men">
+            <img src="https://source.unsplash.com/random/300x300/?shoe?83">
+            <p><b>Women Shoe</b></p>
+            <div class="pa"> 
+                <p>Price - 2500</p>
+            </div> 
+        </div>
+        <div class="men">
+            <img src="https://source.unsplash.com/random/300x300/?shoe?93">
+            <p><b>Women Shoe</b></p>
+            <div class="pa"> 
+                <p>Price - 1050</p>
+            </div> 
+        </div>
+   </div>
+    </div>
+    <div class="display2">
+        <div class="image1">
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?21">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 1050</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?32">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 799</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?41">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 250</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?51">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 599</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?61">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 5000</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?71">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 450</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?81">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 2500</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?91">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 1050</p>
+                </div> 
+            </div>
+       </div>
+        </div>
+    <div class="footer">
+        <div class="foocontent">
+            <p>CHANDRU</p>
+            <p>PHONE-9578185141</p>
+            <p>TIRUPUR</p>
+            <p>Follow us on</p>
+            <div class="link">
+                 <a href="www.instagram.com" style="color: white;"><i class="fa-brands fa-square-instagram"></i></a>
+                 <a href="https://twitter.com/Chandru29094807" style="color: white;"><i class="fa-brands fa-square-twitter"></i></a>
+                 <a href="#" style="color: white;"><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let a=document.querySelector(".con")
+        let b=document.querySelector(".side")
+        let d=document.querySelector(".top")
+        let c=document.querySelector(".icon")
+        let e=document.querySelector(".side1")
+        let f=document.querySelector(".entire")
+        let g=document.querySelector(".entire1")
+        let h=document.querySelector(".side2")
+        let i=document.querySelector(".top_content")
+        let j=document.querySelector(".delete")
+        let k=document.querySelector(".middle")
+        let l=document.querySelector(".m_content")
+        let m=document.querySelector(".image1")
+        let n=document.querySelector(".display1")
+        let o=document.querySelector(".display0")
+        let p=document.querySelector(".display2")
+
+
+        function call(){
+            d.style.top="30px";
+            f.style.display="none"
+            g.style.display="none"
+        }
+        function del(){
+            d.style.top="-280px"
+            f.style.display="block"
+            g.style.display="block"
+        }
+        function side(){
+            e.style.left="0px"
+        }
+        function sidedel(){
+            e.style.left="-320px";
+        }
+        function show(){
+            n.style.display="block";
+            o.style.display="none";
+            p.style.display="none";
+        }
+        function show1(){
+            n.style.display="none";
+            o.style.display="block";
+            p.style.display="none";
+        }
+        function show2(){
+            n.style.display="none";
+            o.style.display="none";
+            p.style.display="block";
+        }
+    </script>
+</body>
+</html>
