@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    body{
+        font-family:'Times New Roman', Times, serif;
+    }
+    .con{
+        width:100%;
+        height:70px;
+        background-color:brown;
+        box-shadow:  0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 0px;
+    }
+    .con h2{
+        position: absolute;
+        left: 25px;
+        padding: 1px;
+        top: 0px;
+    }
+    .con h2 i{
+        font-size: 55px;
+        color: white;
+    }
+    h1{
+        color: white;
+        font-size: 30px;
+    }
+    .side{
+        position: absolute;
+        right:25px;
+        top:35px;
+        display: block;
+    }
+    .icon{
+        padding: 11px;
+        color: white;
+        text-decoration: none;
+    }
+    .icon:hover{
+        color:black;
+    }
+    #icon3{
+        display: none;
+    }
+    .top{
+        position: absolute;
+        top:-340px;
+        width: 60%;
+        display: block;
+        left: 320px;
+        background-color:brown;
+        border-radius: 8px;
+        transition: 1s;
+    }
+    .top h1{
+        color: white;
+        margin-left: 380px;
+    }
+    .top p{
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        color: white;
+    }
+    .side1{
+        width: 20%;
+        background-color: brown;
+        height: 100%;
+        position: fixed;
+        left: -320px;
+        top: 7px;
+        transition: 1s;
+    }
+    .side2{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+        margin-top: 30px;
+    }
+    .side2 i{
+        padding: 20px;
+        color: black;
+    }
+    .icon1{
+        display: flex;
+        padding: 15px;
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+    }
+    marquee{
+            font-size: 19px;
+            direction: scroll;
+            letter-spacing: 1px;
+        }
+    .entire{
+        display: block;
+    }
+    .delete{
+        padding: 6px;
+        margin-left: 50px;
+        margin-bottom: 8px;
+        width: 10%;
+        font-size: 20px;
+        color: brown;
+        border-radius: 5px;
+        border: none;
+       }
+       .delete:hover{
+        background-color: black;
+        color: white;
+       }
+       .user{
+        background-color: white;
+        border-radius: 100%;
+        width: 20%;
+        height: 40px;
+        display: flex;
+        padding: 3px;
+        position: relative;
+        right: 0px;
+        bottom: 25px;
+        align-items: center;
+       }
+       .user i{
+        font-size: 20px;
+        position: relative;
+        bottom: 0px;
+        left: -4px;
+        right:25
+       }
+       .user p{
+        margin-left: 10px;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 17px;
+       }
+       .collection{
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-basis: 20%;
+        margin-left: 20px;
+       }
+       .men{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:antiquewhite;
+        margin-bottom: 20px;
+       }
+       .men p{
+        font-size: 20px;
+       }
+       .p{
+        padding: 10px;
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+       }
+       .displaycon{
+        display: block;
+       }
+       .displaycon1{
+        display: none;
+       }
+       .displaycon2{
+        display: none;
+       }
+       .nextpage{
+        background-color: white;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 40px;
+       }
+       .circle{
+        background-color: lightblue;
+        border-radius: 100%;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+       }
+       .circle:hover{
+        background-color: brown;
+        color: black;
+       }
+       .nextpage button{
+        font-size: 20px;
+        border: none;
+        border-radius: 100%;
+        background-color: lightblue;
+        width: 30px;
+       }
+       .nextpage button:hover{
+        background-color: brown;
+        border: none;
+        border-radius: 100%;
+       }
+       @media screen and (max-width:900px){
+        .top{
+            top: -1500px;
+        }
+        .side{
+            display: none;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Best Shop<i class="fa-solid fa-cart-shopping"></i></h1>
+        <div class="side">
+            <a href="Shop.html" target="_self" class="icon">Home</a>
+            <a href="shop collection.html" class="icon">Collection</a>
+            <a href="#" class="icon" onclick="call()" >About</a>
+            <a href="#" class="icon" onclick="side()" ><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <h2><i class="fa-brands fa-microblog"></i></h2>
+    </div>
+    <div class="entire">
+        <div class="float">
+        <marquee> Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp
+            &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp
+            &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp &#x2022; Free Shipping on all orders &nbsp  &#x2022; Free returns with 30 days &nbsp
+        </marquee>
+        </div></div>
+        <div class="top">
+            <h1>ABOUT</h1>
+            <div class="top_content">
+                <p>Creating a shopping website involves a series of strategic steps. Begin by clearly defining the purpose and scope 
+                    of your site, specifying the products or services and identifying your target audience. Choose a suitable platform, 
+                    like WordPress with WooCommerce or Shopify, and secure a domain name and hosting. Design an appealing and user-friendly 
+                    interface, ensuring responsiveness across devices. Organize your product catalog logically, and implement a secure shopping 
+                    cart and checkout system. Prioritize security measures, such as SSL encryption, and adhere to data protection regulations. 
+                    Stay abreast of e-commerce trends to ensure your website remains competitive and meets customer expectations.</p>
+            </div>
+            <button onclick="del()" class="delete">
+                Cancel
+            </button>
+        </div>
+        <div class="side1">
+            <div class="side2">
+                <div class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <p>CHANDRU</p>
+                    <hr style="color: white;">
+                </div>
+                <a href="about" class="icon1">&#x2022; Home</a>
+                <a href="about" class="icon1">&#x2022; Kids Shoe</a>
+                <a href="#" class="icon1" >&#x2022; Men shoe</a>
+                <a href="about" class="icon1">&#x2022; Women Shoe</a>
+                <a href="#" class="icon1" onclick="sidedel()">&#x2022; Cancel</a>
+            </div>
+        </div>
+        <div class="displaycon">
+         <p class="p"><strong>MENS SHOE</strong></p>
+        <div class="collection">
+                <div class="men">
+                    <img src="https://source.unsplash.com/random/300x300/?shoe?3">
+                    <p><b>Men Shoe</b></p>
+                    <div class="pa"> 
+                        <p>Price - 799</p>
+                    </div>
+                </div>
+                <div class="men">
+                    <img src="https://source.unsplash.com/random/300x300/?shoe?4">
+                    <p><b>Men Shoe</b></p>
+                    <div class="pa"> 
+                        <p>Price - 250</p>
+                    </div> 
+                </div>
+                <div class="men">
+                    <img src="https://source.unsplash.com/random/300x300/?shoe?5">
+                    <p><b>Men Shoe</b></p>
+                    <div class="pa"> 
+                        <p>Price - 599</p>
+                    </div> 
+                </div>
+                <div class="men">
+                    <img src="https://source.unsplash.com/random/300x300/?shoe?6">
+                    <p><b>Men Shoe</b></p>
+                    <div class="pa"> 
+                        <p>Price - 5000</p>
+                    </div> 
+                </div>
+                <div class="men">
+                    <img src="https://source.unsplash.com/random/300x300/?shoe?7">
+                    <p><b>Men Shoe</b></p>
+                    <div class="pa"> 
+                        <p>Price - 450</p>
+                    </div> 
+                </div>
+                <div class="men">
+                    <img src="https://source.unsplash.com/random/300x300/?shoe?8">
+                    <p><b>Men Shoe</b></p>
+                    <div class="pa"> 
+                        <p>Price - 2500</p>
+                    </div> 
+                </div>
+                <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?3">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 799</p>
+        </div>
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?4">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 250</p>
+        </div> 
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?5">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 599</p>
+        </div> 
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?6">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 5000</p>
+        </div> 
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?7">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 450</p>
+        </div> 
+    </div>
+    <div class="men">
+        <img src="https://source.unsplash.com/random/300x300/?shoe?8">
+        <p><b>Men Shoe</b></p>
+        <div class="pa"> 
+            <p>Price - 2500</p>
+        </div> 
+    </div>
+</div>
+</div>
+<div class="displaycon1">
+    <p class="p"><strong>WOMENS SHOE</strong></p>
+    <div class="collection">
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?37">
+                <p><b>Women Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 799</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?47">
+                <p><b>Women Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 250</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?57">
+                <p><b>Women Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 599</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?67">
+                <p><b>Women Shoe</b></p>7
+                <div class="pa"> 
+                    <p>Price - 5000</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?77">
+                <p><b>Women Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 450</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?87">
+                <p><b>Women Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 2500</p>
+                </div> 
+            </div>
+            <div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?36">
+    <p><b>Women Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 799</p>
+    </div>
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?46">
+    <p><b>Women Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 250</p>
+    </div> 
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?56">
+    <p><b>Women Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 599</p>
+    </div> 
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?66">
+    <p><b>Women Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 5000</p>
+    </div> 
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?76">
+    <p><b>Women Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 450</p>
+    </div> 
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?86">
+    <p><b>Women Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 2500</p>
+    </div> 
+</div>
+</div>
+</div>
+<div class="displaycon2">
+    <p class="p"><strong>KIDS SHOE</strong></p>
+    <div class="collection">
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?371">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 799</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?471">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 250</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?571">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 599</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?671">
+                <p><b>Kids Shoe</b></p>7
+                <div class="pa"> 
+                    <p>Price - 5000</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?771">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 450</p>
+                </div> 
+            </div>
+            <div class="men">
+                <img src="https://source.unsplash.com/random/300x300/?shoe?871">
+                <p><b>Kids Shoe</b></p>
+                <div class="pa"> 
+                    <p>Price - 2500</p>
+                </div> 
+            </div>
+            <div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?361">
+    <p><b>Kids Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 799</p>
+    </div>
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?461">
+    <p><b>Kids Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 250</p>
+    </div> 
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?561">
+    <p><b>Kids Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 599</p>
+    </div> 
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?661">
+    <p><b>Kids Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 5000</p>
+    </div> 
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?761">
+    <p><b>Kids Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 450</p>
+    </div> 
+</div>
+<div class="men">
+    <img src="https://source.unsplash.com/random/300x300/?shoe?861">
+    <p><b>Kids Shoe</b></p>
+    <div class="pa"> 
+        <p>Price - 2500</p>
+    </div> 
+</div>
+</div>
+</div>
+<div class="nextpage">
+    <div class="circle"><button class="next" onclick="print2_con()">1</button></div>
+    <div class="circle"><button class="next" onclick="print1_con()">2</button></div>
+    <div class="circle"><button class="next" onclick="print_con()">3</button></div>
+</div><
+<script>
+            let a=document.querySelector(".con")
+            let b=document.querySelector(".side")
+            let d=document.querySelector(".top")
+            let c=document.querySelector(".icon")
+            let e=document.querySelector(".side1")
+            let f=document.querySelector(".entire")
+            let g=document.querySelector(".entire1")
+            let h=document.querySelector(".side2")
+            let i=document.querySelector(".top_content")
+            let j=document.querySelector(".delete")
+            let k=document.querySelector(".middle")
+            let l=document.querySelector(".m_content")
+            let m=document.querySelector(".image1")
+            let n=document.querySelector(".display1")
+            let o=document.querySelector(".display0")
+            let p=document.querySelector(".display2")
+            let q=document.querySelector(".nextpage")
+            let r=document.querySelector(".circle")
+            let u=document.querySelector(".next")
+            let s=document.querySelector(".displaycon")
+            let t=document.querySelector(".displaycon1")
+            let v=document.querySelector(".displaycon2")
+    
+            function call(){
+                d.style.top="30px";
+                f.style.display="none"
+                g.style.display="none"
+            }
+            function del(){
+                d.style.top="-280px"
+                f.style.display="block"
+                g.style.display="block"
+            }
+            function side(){
+                e.style.left="0px"
+            }
+            function sidedel(){
+                e.style.left="-320px";
+            }
+            function show(){
+                n.style.display="block";
+                o.style.display="none";
+                p.style.display="none";
+            }
+            function show1(){
+                n.style.display="none";
+                o.style.display="block";
+                p.style.display="none";
+            }
+            function show2(){
+                n.style.display="none";
+                o.style.display="none";
+                p.style.display="block";
+            }
+            function print_con(){
+                s.style.display="none"
+                t.style.display="none"
+                v.style.display="block"
+            }
+            function print1_con(){
+                s.style.display="none"
+                t.style.display="block"
+                v.style.display="none"
+            }
+            function print2_con(){
+                s.style.display="block"
+                t.style.display="none"
+                v.style.display="none"
+            }
+        </script>
+</body>
+</html>
